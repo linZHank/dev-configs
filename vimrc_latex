@@ -1,0 +1,39 @@
+syntax on
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set nu
+set wrap
+set linebreak
+set incsearch
+
+set colorcolumn=128
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+call plug#begin()
+
+Plug 'Valloric/YouCompleteMe'
+Plug 'lifepillar/vim-solarized8'
+Plug 'scrooloose/nerdtree'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+call plug#end()
+
+colorscheme solarized8
+set background=light
+
+let mapleader=" "
+let g:livepreview_previewer = 'okular'
+
+" NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>ll :LLPStartPreview<CR>
+
+"YCM
+nnoremap <silent> <leader>gd: YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gd: YcmCompleter FixIt<CR>
+
+" Spell check
+autocmd BufRead,BufNewFile *.tex setlocal spell
+
