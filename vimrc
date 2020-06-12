@@ -19,9 +19,11 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/nerdtree'                                                                                                      
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }                                                                          
 Plug 'lervag/vimtex'                                                                                                            
-                                                                                                                                
+Plug 'dense-analysis/ale'
+
 call plug#end()                                                                                                                 
-                                                                                                                                
+
+
 " Enable true color 启用终端24位色                                                                                              
 if exists('+termguicolors')                                                                                                     
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"                                                                                      
@@ -48,4 +50,4 @@ nnoremap <silent> <leader>gd: YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gd: YcmCompleter FixIt<CR>                                                                            
                                                                                                                                 
 " Spell check                                                                                                                   
-autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.md,*.tex setlocal spell
