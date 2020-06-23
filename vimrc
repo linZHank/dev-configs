@@ -23,6 +23,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -58,6 +59,9 @@ autocmd BufRead,BufNewFile *.tex,*.sty,*.bib
 
 " Set leader key
 let mapleader=" "
+
+" vim-fugitive
+nnoremap <leader>g :G<CR>
 
 " vim-python-pep8-indent
 let g:python_pep8_indent_multiline_string = 4
