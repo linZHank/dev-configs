@@ -1,5 +1,5 @@
 syntax on
-
+set t_Co=256
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
