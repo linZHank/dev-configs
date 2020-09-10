@@ -22,8 +22,10 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/nerdtree'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
-Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tpope/vim-fugitive'
+Plug 'dense_analysis/ale'
+Plug 'powerline/powerline'
+
 
 call plug#end()
 
@@ -37,16 +39,6 @@ endif
 " Set background and colorscheme
 set background=dark
 colorscheme gruvbox
-
-" Set proper PEP 8 for Python
-au BufRead,BufNewFile *.py 
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=127 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
 
 " Set color and spell for text editing
 autocmd BufRead,BufNewFile *.tex,*.sty,*.bib 
@@ -63,9 +55,6 @@ let mapleader=" "
 " vim-fugitive
 nnoremap <leader>g :G<CR>
 
-" vim-python-pep8-indent
-let g:python_pep8_indent_multiline_string = 4
-
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>ll :LLPStartPreview<CR>
@@ -77,3 +66,6 @@ nnoremap <silent> <leader>yf: YcmCompleter FixIt<CR>
 
 " Latex-live-preview 
 let g:livepreview_previewer = 'okular'
+
+" ALE
+let g:ale_completion_enable = 1
