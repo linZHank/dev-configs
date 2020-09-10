@@ -20,7 +20,6 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/nerdtree'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
 Plug 'dense_analysis/ale'
@@ -46,9 +45,6 @@ autocmd BufRead,BufNewFile *.tex,*.sty,*.bib
     \ setlocal spell |
     \ colorscheme solarized8
 
-" autocmd BufRead,BufNewFile *.tex,*.sty,*.bib colorscheme solarized8
-" autocmd BufRead,BufNewFile *.md,*.tex setlocal spell
-
 " Set leader key
 let mapleader=" "
 
@@ -64,7 +60,8 @@ let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <silent> <leader>yg: YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>yf: YcmCompleter FixIt<CR>
 
-" Latex-live-preview 
+" Vimtex 
+let g:vimtex_tex_flavor = 'latex'
 let g:livepreview_previewer = 'okular'
 
 " ALE
