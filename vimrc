@@ -61,7 +61,7 @@ nnoremap <silent> <leader>yg: YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>yf: YcmCompleter FixIt<CR>
 
 " Vimtex 
-let g:vimtex_tex_flavor = 'latex'
+let g:tex_flavor = 'latex'
 let g:livepreview_previewer = 'okular'
 
 " ALE
