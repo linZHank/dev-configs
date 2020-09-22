@@ -22,7 +22,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/nerdtree'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
-Plug 'dense_analysis/ale'
+Plug 'dense-analysis/ale'
 Plug 'powerline/powerline'
 
 
