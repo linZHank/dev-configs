@@ -25,6 +25,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'gruvbox-community/gruvbox'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -52,3 +53,6 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+
+" Fugitive
+nnoremap <leader>g :G<CR>
