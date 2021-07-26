@@ -36,7 +36,8 @@ sudo update-alternatives --set vi /usr/local/bin/vim
 ```
 - Check if clipboard and Python3 were support using `vim --version`
 - Install vim-plug: 
-```consolecurl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+```console
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
