@@ -24,7 +24,8 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin()
 
-Plug 'Valloric/YouCompleteMe'
+Plug 'davidhalter/jedi-vim'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
