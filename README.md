@@ -22,7 +22,7 @@ cd vim
             --enable-luainterp=yes \
             --enable-gui=gtk3 \
             --enable-cscope \
-            --prefix=/usr/local
+            --prefix=/usr/local \
             --with-x
 
 
