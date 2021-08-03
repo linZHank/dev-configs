@@ -61,7 +61,7 @@ cd ~/.local/share/nvim/site/plugged/YouCompleteMe (neovim) :)
 ./install.py
 ```
 
-2. **Ale Linting** 
+2. **ALE Linting** 
 
 It seems [ALE](https://github.com/dense-analysis/ale) will not work out of the box. Install Linting tools and configure [`.vimrc`](https://github.com/linZHank/dev-configs/blob/master/vim/.vimrc) to specify linters and fixers.
 ```bash
