@@ -9,7 +9,7 @@ sudo apt install git build-essential python3-dev xorg-dev vim-gtk3 libncurses-de
 ```
 ### Build Vim from source
 Refered to [this guide](https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source).
-```console
+```bash
 cd ~
 git clone https://github.com/vim/vim.git
 cd vim
@@ -36,9 +36,13 @@ sudo update-alternatives --set vi /usr/local/bin/vim
 ```
 - Check if clipboard and Python3 were support using `vim --version`
 - Install vim-plug: 
-```console
+```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+- Create undodir
+```bash
+mkdir ~/.vim/undodir
 ```
 
 ## Issues
