@@ -63,7 +63,7 @@ cd ~/.local/share/nvim/site/plugged/YouCompleteMe (neovim) :)
 
 2. **Ale Linting** 
 
-It seems [Ale](https://github.com/dense-analysis/ale) will not work out of the box. Install Linting tools and configure [`.vimrc`](https://github.com/linZHank/dev-configs/blob/master/vim/.vimrc) to specify linters and fixers.
+It seems [ALE](https://github.com/dense-analysis/ale) will not work out of the box. Install Linting tools and configure [`.vimrc`](https://github.com/linZHank/dev-configs/blob/master/vim/.vimrc) to specify linters and fixers.
 ```bash
 # Lint Python
 pip install pylint flake8 black
