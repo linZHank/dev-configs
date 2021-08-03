@@ -3,7 +3,7 @@
 ## Install Vim
 The following steps was implemented on a minimal installed Ubuntu 20.04.
 ### Dependencies
-```console
+```bash
 sudo apt update
 sudo apt install git build-essential python3-dev xorg-dev vim-gtk3 libncurses-dev curl  
 ```
