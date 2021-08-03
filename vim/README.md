@@ -44,12 +44,14 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```bash
 mkdir ~/.vim/undodir
 ```
-- Copy and paste content in [`.vimrc`](https://github.com/linZHank/dev-configs/blob/master/vim/.vimrc). 
+- Open Vim configuration file: `vim ~/.vimrc`, then copy and paste content in [`.vimrc`](https://github.com/linZHank/dev-configs/blob/master/vim/.vimrc). 
 ```vim
+:w
 :PlugInstall
 :q
 :so%
 ```
+
 ## Issues
 1. **The ycmd server SHUT DOWN (restart with :YcmRestartServer)**
 
@@ -61,7 +63,7 @@ cd ~/.local/share/nvim/site/plugged/YouCompleteMe (neovim) :)
 
 2. **Ale Linting** 
 
-It seems Ale will not work out of the box. Install Linting tools and configure `.vimrc` as shown in the file.
+It seems [Ale](https://github.com/dense-analysis/ale) will not work out of the box. Install Linting tools and configure [`.vimrc`](https://github.com/linZHank/dev-configs/blob/master/vim/.vimrc) to specify linters and fixers.
 ```bash
 # Lint Python
 pip install pylint flake8 black
