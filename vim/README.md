@@ -42,12 +42,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 
 ## Issues
-~~1. **The ycmd server SHUT DOWN (restart with :YcmRestartServer)**
+1. **The ycmd server SHUT DOWN (restart with :YcmRestartServer)**
 ```bash
 cd ~.vim/plugged/YouCompleteMe (vim)
 cd ~/.local/share/nvim/site/plugged/YouCompleteMe (neovim) :)
 ./install.py
-```~~
+```
 2. **Ale Linting**
 It seems Ale will not work out of the box. Install Linting tools and configure `.vimrc` as shown in the file.
 ```bash
