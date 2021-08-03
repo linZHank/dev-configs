@@ -44,7 +44,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```bash
 mkdir ~/.vim/undodir
 ```
-
+- Copy and paste content in [`.vimrc`](https://github.com/linZHank/dev-configs/blob/master/vim/.vimrc). 
+```vim
+:PlugInstall
+:q
+:so%
+```
 ## Issues
 1. **The ycmd server SHUT DOWN (restart with :YcmRestartServer)**
 
