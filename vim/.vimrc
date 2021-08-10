@@ -24,8 +24,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin()
 
-" Plug 'davidhalter/jedi-vim'
-" Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'dense-analysis/ale'
@@ -55,6 +54,11 @@ autocmd BufRead,BufNewFile *.tex,*.sty,*.bib
 
 " Set leader key
 let mapleader=" "
+
+
+" YCM
+let g:ycm_autoclose_preview_window_after_completion=1
+nnoremap <silent> <leader>yg: YcmCompleter GoTo<CR>
 
 " ALE
 let g:ale_completion_enabled = 1
@@ -91,9 +95,3 @@ nnoremap <leader>g :G<CR>
 " Vimtex 
 let g:tex_flavor = 'latex'
 let g:livepreview_previewer = 'okular'
-
-" YCM
-" let g:ycm_autoclose_preview_window_after_completion=1
-" nnoremap <silent> <leader>yg: YcmCompleter GoTo<CR>
-" nnoremap <silent> <leader>yf: YcmCompleter FixIt<CR>
-
