@@ -58,14 +58,13 @@ mkdir ~/.vim/undodir
 
 sudo apt update
 sudo apt install build-essential cmake vim-nox python3-dev mono-complete golang nodejs default-jdk npm
-# Compile
+# Compile, or encountered error: "The ycmd server SHUT DOWN (restart with :YcmRestartServer)"
 cd ~.vim/plugged/YouCompleteMe (vim)
 cd ~/.local/share/nvim/site/plugged/YouCompleteMe (neovim) :)
 python3 install.py --all
 ```
 
 
-The ycmd server SHUT DOWN (restart with :YcmRestartServer)
 
 2. **ALE Linting** 
 
