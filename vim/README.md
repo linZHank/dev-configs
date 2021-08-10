@@ -53,13 +53,19 @@ mkdir ~/.vim/undodir
 ```
 
 ## Issues
-1. **The ycmd server SHUT DOWN (restart with :YcmRestartServer)**
-
+1. **Install YouCompleteMe**
 ```bash
+
+sudo apt update
+sudo apt install build-essential cmake vim-nox python3-dev mono-complete golang nodejs default-jdk npm
+# Compile
 cd ~.vim/plugged/YouCompleteMe (vim)
 cd ~/.local/share/nvim/site/plugged/YouCompleteMe (neovim) :)
-./install.py
+python3 install.py --all
 ```
+
+
+The ycmd server SHUT DOWN (restart with :YcmRestartServer)
 
 2. **ALE Linting** 
 
@@ -67,6 +73,7 @@ It seems [ALE](https://github.com/dense-analysis/ale) will not work out of the b
 ```bash
 # Lint Python
 pip install pylint flake8 black
+echo "export PATH=$PATH:$HOME/.local/bin:$PATH" >> $HOME/.bashrc
 # Lint XML
 sudo apt install libxml2-utils
 ```
