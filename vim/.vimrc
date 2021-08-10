@@ -61,7 +61,6 @@ let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <silent> <leader>yg: YcmCompleter GoTo<CR>
 
 " ALE
-let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \   'python': ['flake8', 'pylint'],
 \   'xml': ['xmllint'],
