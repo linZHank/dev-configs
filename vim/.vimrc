@@ -1,5 +1,6 @@
 syntax on
 
+set encoding=utf-8
 set clipboard=unnamedplus
 set exrc
 set guicursor=
@@ -8,6 +9,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
+set backspace=indent,eol,start
 set nu
 set noswapfile
 set nobackup
@@ -51,10 +53,12 @@ autocmd BufRead,BufNewFile *.tex,*.sty,*.bib
     \ set background=light |
     \ setlocal spell |
     \ colorscheme solarized8
+" Set xml files
+autocmd BufRead,BufNewFile *.urdf,*.xacro,*.sdf,*.world,*.launch
+    \ set filetype=xml 
 
 " Set leader key
 let mapleader=" "
-
 
 " YCM
 let g:ycm_autoclose_preview_window_after_completion=1
@@ -62,17 +66,20 @@ nnoremap <silent> <leader>yg: YcmCompleter GoTo<CR>
 
 " ALE
 let g:ale_linters = {
-\   'python': ['flake8', 'pylint'],
+\   'python': ['flake8', 'pylint', 'pyright'],
 \   'xml': ['xmllint'],
+\   'tex': ['textlint'],
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black'],
 \   'xml': ['xmllint'],
+\   'tex': ['textlint'],
 \}
 nnoremap <leader>ad :ALEGoToDefinition<CR>
 nnoremap <leader>al :ALELint<CR>
 nnoremap <leader>af :ALEFix<CR>
+call ch_logfile(expand('/tmp/chlogfile.log'), 'w')
 
 " Set lightline
 set laststatus=2
@@ -84,7 +91,7 @@ nnoremap <leader>nl :LLPStartPreview<CR>
 
 " Set nerdcommenter 
 let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
+" let g:NERDCompactSexyComs = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDToggleCheckAllLines = 1
 " let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
@@ -94,4 +101,6 @@ nnoremap <leader>g :G<CR>
 
 " Vimtex 
 let g:tex_flavor = 'latex'
-let g:livepreview_previewer = 'okular'
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
